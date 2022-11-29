@@ -47,22 +47,22 @@ const Home = () => {
 
     const projects = [
         {
-            name: "Project 1",
-            description: "This is a project",
+            name: "First Ecommerce",
+            description: "This project is a simple ecommerce website that I made using Angular and SpringBoot.",
             image: "https://via.placeholder.com/150",
-            link: "https://google.com"
+            link: "https://curso-java-frontend.web.app/"
         },
         {
-            name: "Project 2",
-            description: "This is a project",
+            name: "100 Dates",
+            description: "If you wanna keep track of your dates, this is the website for you. Made with Angular and Firebase.",
             image: "https://via.placeholder.com/150",
-            link: "https://googles.com"
+            link: "https://citas-85ff9.web.app/"
         },
         {
-            name: "Project 3",
-            description: "This is a project",
+            name: "Chat App",
+            description: "This was my most recent project, made with a friend. It's a chat app made with Flask for the CS50 Harvard Course.",
             image: "https://via.placeholder.com/150",
-            link: "https://googlex.com"
+            link: "https://github.com/fpesce27/chatApp"
         },
     ]
 
