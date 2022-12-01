@@ -2,7 +2,7 @@
   margin-top: 30px;
 }
 
-.title, .menuButtons{
+.title{
   font-size: 5em !important;
 }
 
@@ -17,5 +17,25 @@
 }
 
 .menuButtons{
+  font-size: 5em !important;
   color: #7494be;
+}
+
+.page{
+  flex-direction: row !important;
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+    font-size: 3em !important;
+  }
+  .subtitle{
+    font-size: 1.5em !important;
+  }
+  .menuButtons{
+    font-size: 3em !important;
+  }
+  .page{
+    flex-direction: column !important;
+  }
 }
