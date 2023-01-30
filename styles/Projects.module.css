@@ -1,0 +1,140 @@
+.projectsPageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+.projectInfo, .projectShow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tecnologiesContainer{
+    padding: 40px;
+}
+
+.description{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ash-black);
+    text-align: start;
+    margin: 10px 0;
+}
+
+.highlight{
+    color: var(--accent);
+}
+
+.tecnologies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 15px;
+}
+
+.projectImage{
+    margin-top: 80px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border: 20px solid var(--ash-black);
+    box-sizing: border-box;
+}
+
+.projectButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.controlsButton {
+    background-color: var(--ash-black);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .5);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlsButton:hover {
+    background-color: var(--white);
+    color: var(--accent);
+}
+
+.controlsButton:active {
+    transform: scale(.9);
+}
+
+
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 1012px) {
+    .sections {
+        flex-direction: column;
+    }
+
+    .tecnologiesContainer {
+        margin-top: 80px;
+    }
+    
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+    }
+    
+    .projectImage {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+    }
+
+    .projectShow {
+       padding-bottom: 70px;
+    }
+}
