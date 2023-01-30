@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { TecnologyTag } from "../about/index";
-import projects from "../constants";
+import projects from "../../constants";
 import styles from "@/styles/Projects.module.css";
 import Button from "@/components/Button";
 
