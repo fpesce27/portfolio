@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Layout from "@/components/Layout";
 import styles from "@/styles/Contact.module.css";
 import React from "react";
+import { send } from 'emailjs-com';
 
 function index() {
   const [from_name, setName] = React.useState("");
@@ -18,6 +19,12 @@ function index() {
       { from_name, to_name: "Franco", reply_to, message },
       "FQZ0k8mSqFAU1QugN"
     );
+  };
+
+  const reset = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -68,7 +75,7 @@ function index() {
                 ></textarea>
                 
                 <div className={styles.buttons}>
-                  <button type="reset">Reset</button>
+                  <button onClick={reset} type="reset">Reset</button>
                   <button type="submit">Send</button>
                 </div>
               </div>
