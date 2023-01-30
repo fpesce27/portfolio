@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import profilePic from "../public/profilePic.jpg";
+import profilePic from "../public/profilePic.png";
 import Button from "@/components/Button";
 
 export default function Home() {
@@ -56,7 +56,7 @@ export default function Home() {
         <div className={styles.rightContainer}>
           <Image
             src={profilePic}
-            alt="Picture of the author"
+            alt="Picture Picture"
             width={500}
             height={500}
             placeholder="blur"

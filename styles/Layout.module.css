@@ -54,7 +54,7 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     padding: 0 100px;
     height: 80px;
-
+    border-radius: 0 0 25px 25px;
 }
 
 .logo {

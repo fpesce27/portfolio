@@ -1,17 +1,27 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Button from "@/components/Button";
 import Layout from "@/components/Layout";
 import styles from "@/styles/Contact.module.css";
 import React from "react";
 import { send } from 'emailjs-com';
+import { motion } from "framer-motion";
 
 function index() {
   const [from_name, setName] = React.useState("");
   const [reply_to, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [error, setError] = React.useState(false);
+  const [success, setSuccess] = React.useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (from_name === "" || reply_to === "" || message === "") {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+      return;
+    }
 
     send(
       "service_kcgevji",
@@ -19,6 +29,12 @@ function index() {
       { from_name, to_name: "Franco", reply_to, message },
       "FQZ0k8mSqFAU1QugN"
     );
+
+    reset();
+    setSuccess(true);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
   };
 
   const reset = () => {
@@ -83,6 +99,25 @@ function index() {
             </form>
           </div>
         </div>
+        {error && (
+          <motion.div className={styles.error}
+            initial={{ x: '-100vw'}}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 120 }}
+            
+          >
+            <p>Please fill out all the fields</p>
+          </motion.div>
+        )}
+        {success && (
+          <motion.div className={styles.success}
+            initial={{ x: '-100vw'}}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 120 }}
+          >
+            <p>Message sent successfully</p>
+          </motion.div>
+        )}
       </div>
     </Layout>
   );
