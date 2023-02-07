@@ -7,6 +7,14 @@ import projects from "../../constants";
 import styles from "@/styles/Projects.module.css";
 import Button from "@/components/Button";
 
+function getImage(link, name){
+
+  if (link === "") return `/${name.toLowerCase().replace(/ /g, "")}.png`
+
+  const imageUrl = 'https://url2img.com/api/v1/capture?access_key=305d71f43d48fa2a9f4f432788113e52&url='
+  return imageUrl + link
+}
+
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [currentProject, setCurrentProject] = useState(0);
@@ -62,7 +70,7 @@ function index() {
             <div className={styles.projectImageContainer}>
 
               <Image
-                src={projects[currentProject].image}
+                src={getImage(projects[currentProject].link, projects[currentProject].name)}
                 alt={projects[currentProject].name}
                 width={500}
                 height={400}
