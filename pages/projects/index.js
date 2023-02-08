@@ -8,9 +8,9 @@ import styles from "@/styles/Projects.module.css";
 import Button from "@/components/Button";
 import Head from "next/head";
 
-function getImage(link, name){
+function getImage(link, currentProject){
 
-  if (link === "") return `/${name.toLowerCase().replace(/ /g, "")}.png`
+  if (link === "") return projects[currentProject].image
 
   const imageUrl = 'https://url2img.com/api/v1/capture?access_key=305d71f43d48fa2a9f4f432788113e52&url='
   return imageUrl + link
@@ -79,7 +79,7 @@ function index() {
               <div className={styles.projectImageContainer}>
 
                 <Image
-                  src={getImage(projects[currentProject].link, projects[currentProject].name)}
+                  src={getImage(projects[currentProject].link, currentProject)}
                   alt={projects[currentProject].name}
                   width={500}
                   height={400}

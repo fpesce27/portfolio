@@ -8,6 +8,8 @@ import {
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
+import chatapp from '@/public/chatapp.png'
+import kicote from '@/public/kicote.png'
 
 const projects = [
     {
@@ -52,7 +54,8 @@ const projects = [
       name: "Chat App",
       description:
         "An app that I made with a friend, where I focus mainly on the frontend and he on the backend. It's a chat app where you can create rooms and chat with your friends.",
-        link: "",
+      link: "",
+      image: chatapp,
       github: 'https://github.com/fpesce27/chatApp',
       tecnologies: [
         {
@@ -67,6 +70,7 @@ const projects = [
       description: 
         'My first Mobile App. An ecommerce where the school can sell their products to the students, and the students can buy them. It is fully functional, with notifications, authentication, etc.',
         link: '',
+      image: kicote,
       github: 'https://github.com/fpesce27/KiCoTe',
       tecnologies: [
         {
