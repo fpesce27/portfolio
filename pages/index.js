@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    <Layout title='Home'>
       <div className={styles.sections}>
         <div className={styles.leftContainer}>
           <h1>

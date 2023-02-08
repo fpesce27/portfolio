@@ -35,13 +35,11 @@ function index() {
   return (
     <>
       <Head>
-        <title>Projects</title>
-        <meta name="description" content="Projects" />
         {projects[currentProject].link !== "" && (
           <link rel="preload" href={getImage(projects[currentProject].link, projects[currentProject].name)} as="image" />
         )}
       </Head>
-      <Layout>
+      <Layout title='Projects'>
         <div className={styles.projectsPageContainer}>
 
           <div className={styles.sections}>

@@ -44,7 +44,7 @@ function index() {
   };
 
   return (
-    <Layout>
+    <Layout title='Contact'>
       <div className={styles.sections}>
         <div className={styles.contactContainer}>
           

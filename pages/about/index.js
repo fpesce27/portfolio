@@ -12,7 +12,7 @@ import Button from "@/components/Button";
 
 function index() {
   return (
-    <Layout>
+    <Layout title='About'>
       <div className={styles.sections}>
         <div className={styles.skills}>
           <h1>Skills</h1>
