@@ -8,8 +8,8 @@ import {
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
-import chatapp from '@/public/chatapp.png'
-import kicote from '@/public/kicote.png'
+import chatapp from './public/chatapp.png'
+import kicote from './public/kicote.png'
 
 const projects = [
     {
