@@ -15,7 +15,7 @@ import Button from "@/components/Button";
 
 export default function Home() {
   const openCv = () => {
-    window.open("/cv.pdf", "_blank");
+    window.open("portfolio/cv.pdf", "_blank");
   };
 
   return (
