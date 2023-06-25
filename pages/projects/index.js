@@ -9,10 +9,10 @@ import Button from "@/components/Button";
 import Head from "next/head";
 
 function getImage(link, currentProject){
-
+  const apiKey = 'b20b6697e25409ed02a4f5628ba69947'
   if (link === "") return projects[currentProject].image
 
-  const imageUrl = 'https://url2img.com/api/v1/capture?access_key=305d71f43d48fa2a9f4f432788113e52&url='
+  const imageUrl = 'https://url2img.com/api/v1/capture?access_key=' + apiKey + '&url='
   return imageUrl + link
 }
 

@@ -90,35 +90,15 @@
   }
 
   .leftContainer{
-    margin-top: 80px;
-  }
-
-  .leftContainer{
     padding: 0 20px;
-  }
-
-  .name{
-    font-size: 2rem;
   }
 
   .job{
     font-size: 1.5rem;
   }
 
-  .socials{
-    gap: 0.5rem;
-  }
-
-  .socialButton{
-    padding: 10px;
-  }
-
-  .socialButton{
-    font-size: 1rem;
-  }
-
-  .image{
-    width: 300px;
-    height: 300px;
+  .rightContainer{
+    display: none;
+    position: absolute;
   }
 }

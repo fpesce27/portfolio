@@ -3,10 +3,29 @@ import dynamic from "next/dynamic";
 import styles from "@/styles/Layout.module.css";
 import Link from "next/link";
 import Head from "next/head";
+import React from "react";
 
 const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
+const mobileBg = {
+  position: "absolute",
+  zIndex: -1,
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "175vh",
+}
+
 export default function Layout({ children, title }) {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -28,7 +47,7 @@ export default function Layout({ children, title }) {
       >
         <Header />
         {children}
-        <ParticlesBg bg={true} type="cobweb" />
+        <ParticlesBg type="cobweb" bg={isMobile ? mobileBg : true} />
       </motion.div>
     </>
   );
@@ -59,6 +78,7 @@ function Header() {
           Contact
         </Link>
       </div>
+
     </motion.header>
   );
 }

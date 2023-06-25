@@ -117,14 +117,24 @@
 
 
 
-
 /* media queries */
 @media screen and (max-width: 768px) {
     .header {
         padding: 0 15px;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: white;
     }
 
     .logo {
         font-size: 1.5rem;
+    }
+
+    .link{
+        font-size: 1.2rem;
+    }
+
+    .button{
+        font-size: 1.2rem;
     }
 }

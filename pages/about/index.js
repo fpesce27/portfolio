@@ -78,8 +78,8 @@ function index() {
 export function TecnologyTag(props) {
   return (
     <Button onClick={() => window.open(props.link, "_blank")}>
-        {props.icon}
-        <span className={styles.tecnologyName}>{props.name}</span>
+      {props.icon}
+      <span>{props.name}</span>
     </Button>
   );
 }

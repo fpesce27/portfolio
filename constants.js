@@ -8,11 +8,16 @@ import {
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
+import Citas from "@/public/Citas.png";
 import ChatApp from "@/public/ChatApp.png";
 import Kicote from "@/public/Kicote.png";
+import OnlineManga from "@/public/OnlineManga.png";
+import Portfolio from "@/public/Portfolio.png";
+import OnlineMangaMobile from "@/public/OnlineMangaMobile.png";
+import CitasMobile from "@/public/CitasMobile.png";
 
 const projects = [
-    {
+    /* {
       name: "First Ecommerce",
       description:
         "Being part of a course I took, my first fullstack project. Its a simple ecommerce with a CRUD of users and products.",
@@ -49,7 +54,7 @@ const projects = [
           link: "https://firebase.google.com/",
         },
       ],
-    },
+    }, */
     {
       name: "Chat App",
       description:
@@ -91,6 +96,7 @@ const projects = [
         'My portfolio, where I show my projects and my skills',
         link: 'https://fpesce27.github.io/portfolio/',
       github: 'https://github.com/fpesce27/portfolio',
+      image: Portfolio,
       tecnologies: [
         {
           icon: <TbBrandNextjs className={styles.icon}/>,
@@ -105,6 +111,7 @@ const projects = [
         'A manga reader where you can read your favorite mangas online, with a own api to get the mangas and chapters',
         link: 'https://onlinemanga.vercel.app/',
       github: 'https://github.com/fpesce27/my-anime-list-clone',
+      image: OnlineManga,
       tecnologies: [
         {
           icon: <TbBrandNextjs className={styles.icon}/>,
@@ -112,7 +119,47 @@ const projects = [
           link: 'https://nextjs.org/',
         },
       ],
-    }
+    },
+    {
+      name: 'Online Manga Mobile',
+      description:
+        'A manga reader where you can read your favorite mangas online, with a own api to get the mangas and chapters',
+        link: '',
+      github: 'https://github.com/fpesce27/Online-Manga-Mobile',
+      image: OnlineMangaMobile,
+      tecnologies: [
+        {
+          icon: <DiReact className={styles.icon}/>,
+          name: 'React Native',
+          link: 'https://reactnative.dev/',
+        },
+        {
+          icon: <DiFirebase className={styles.icon}/>,
+          name: 'Firebase',
+          link: 'https://firebase.google.com/',
+        },
+      ],
+    },
+    {
+      name: "100 Dates Mobile",
+      description:
+        "An app where you can keep track of the dates you've been on with your couple, following the 100 Dates trend.",
+        link: "",
+      github: 'https://github.com/fpesce27/100-Citas-Mobile',
+      image: CitasMobile,
+      tecnologies: [
+        {
+          icon: <DiReact className={styles.icon}/>,
+          name: 'React Native',
+          link: 'https://reactnative.dev/',
+        },
+        {
+          icon: <DiFirebase className={styles.icon}/>,
+          name: "Firebase",
+          link: "https://firebase.google.com/",
+        },
+      ],
+    },
 ];
 
 projects.reverse()

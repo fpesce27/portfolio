@@ -59,6 +59,28 @@
     }
 
     .skills{
-        margin-top: 80px;
+        padding-top: 100px;
     }
+
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .aboutMeText, .highlight{
+        font-size: 1.2rem;
+    }
+
+    .skillsContainer{
+        justify-content: flex-start;
+    }
+
+    .aboutMeText{
+        padding: 25px;
+    }
+
+    .aboutMe, .skills{
+        height: 110vh;
+    }
+
 }
