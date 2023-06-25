@@ -141,7 +141,7 @@ const projects = [
       ],
     },
     {
-      name: "100 Dates Mobile",
+      name: "100 Dates Mobile (WIP)",
       description:
         "An app where you can keep track of the dates you've been on with your couple, following the 100 Dates trend.",
         link: "",
