@@ -10,7 +10,10 @@ import Head from "next/head";
 
 function getImage(link, currentProject, showCustomImage){
   const apiKey = 'b20b6697e25409ed02a4f5628ba69947'
-  if (link === "" || showCustomImage) return projects[currentProject].image
+  if (link === "") return projects[currentProject].image
+  else if (showCustomImage && projects[currentProject] != undefined) {
+    return projects[currentProject].image
+  }
 
   const imageUrl = 'https://url2img.com/api/v1/capture?access_key=' + apiKey + '&url='
   return imageUrl + link
@@ -77,7 +80,7 @@ function index() {
               <div className={styles.projectImageContainer}>
 
                 <Image
-                  src={getImage(projects[currentProject].link, currentProject)}
+                  src={getImage(projects[currentProject].link, currentProject, projects[currentProject].showCustomImage)}
                   alt={projects[currentProject].name}
                   width={500}
                   height={400}
