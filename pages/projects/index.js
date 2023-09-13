@@ -8,9 +8,9 @@ import styles from "@/styles/Projects.module.css";
 import Button from "@/components/Button";
 import Head from "next/head";
 
-function getImage(link, currentProject){
+function getImage(link, currentProject, showCustomImage){
   const apiKey = 'b20b6697e25409ed02a4f5628ba69947'
-  if (link === "") return projects[currentProject].image
+  if (link === "" || showCustomImage) return projects[currentProject].image
 
   const imageUrl = 'https://url2img.com/api/v1/capture?access_key=' + apiKey + '&url='
   return imageUrl + link
@@ -36,7 +36,7 @@ function index() {
     <>
       <Head>
         {projects[currentProject].link !== "" && (
-          <link rel="preload" href={getImage(projects[currentProject].link, projects[currentProject].name)} as="image" />
+          <link rel="preload" href={getImage(projects[currentProject].link, projects[currentProject].name, projects[currentProject].showCustomImage)} as="image" />
         )}
       </Head>
       <Layout title='Projects'>

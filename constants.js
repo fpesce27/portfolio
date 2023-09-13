@@ -5,7 +5,7 @@ import {
     DiFirebase,
     DiGit,
     DiJava,
-    DiExpress
+    DiJavascript1
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
@@ -171,11 +171,12 @@ const projects = [
       image: ImagesFromUrl,
       tecnologies: [
         {
-          icon: <DiExpress className={styles.icon}/>,
+          icon: <DiJavascript1 className={styles.icon}/>,
           name: 'Express',
           link: 'https://expressjs.com/es/',
         },
       ],
+      showCustomImage: true,
     },
 ];
 
