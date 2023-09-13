@@ -5,6 +5,7 @@ import {
     DiFirebase,
     DiGit,
     DiJava,
+    DiExpress
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
@@ -15,6 +16,7 @@ import OnlineManga from "@/public/OnlineManga.png";
 import Portfolio from "@/public/Portfolio.png";
 import OnlineMangaMobile from "@/public/OnlineMangaMobile.png";
 import CitasMobile from "@/public/CitasMobile.png";
+import ImagesFromUrl from "@/public/ImagesFromUrl.png";
 
 const projects = [
     /* {
@@ -157,6 +159,21 @@ const projects = [
           icon: <DiFirebase className={styles.icon}/>,
           name: "Firebase",
           link: "https://firebase.google.com/",
+        },
+      ],
+    },
+    {
+      name: "Images from url",
+      description:
+        "An api where, by sending the url, you get a list of the images urls. Also, you can filter by using the css style",
+        link: "https://images-from-url.vercel.app/api/images",
+      github: 'https://github.com/fpesce27/images-from-url',
+      image: ImagesFromUrl,
+      tecnologies: [
+        {
+          icon: <DiExpress className={styles.icon}/>,
+          name: 'Express',
+          link: 'https://expressjs.com/es/',
         },
       ],
     },
