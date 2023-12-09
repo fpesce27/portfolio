@@ -5,7 +5,9 @@ import {
     DiFirebase,
     DiGit,
     DiJava,
-    DiJavascript1
+    DiJavascript1,
+    DiHtml5,
+    DiCss3
 } from 'react-icons/di'
 import {TbBrandNextjs} from 'react-icons/tb'
 import styles from "@/styles/About.module.css";
@@ -17,6 +19,7 @@ import Portfolio from "@/public/Portfolio.png";
 import OnlineMangaMobile from "@/public/OnlineMangaMobile.png";
 import CitasMobile from "@/public/CitasMobile.png";
 import ImagesFromUrl from "@/public/ImagesFromUrl.png";
+import Monitoreo from "@/public/Monitoreo.png";
 
 const projects = [
     /* {
@@ -174,6 +177,32 @@ const projects = [
           icon: <DiJavascript1 className={styles.icon}/>,
           name: 'Express',
           link: 'https://expressjs.com/es/',
+        },
+      ],
+      showCustomImage: true,
+    },
+    {
+      name: "Monitoreo de Estado de Servicio",
+      description:
+        "A web app where you as a user can join comunities to report certain incidents in services from your city. Also, you can create your own comunity and invite people to join it.",
+        link: "https://tpa-mama-grupo-06.onrender.com/",
+      github: 'https://github.com/fpesce27/2023-tpa-mama-grupo-06',
+      image: Monitoreo,
+      tecnologies: [
+        {
+          icon: <DiJava className={styles.icon}/>,
+          name: 'Java (Javalin)',
+          link: 'https://javalin.io/',
+        },
+        {
+          icon: <DiHtml5 className={styles.icon}/>,
+          name: 'HTML',
+          link: 'https://es.wikipedia.org/wiki/HTML',
+        },
+        {
+          icon: <DiCss3 className={styles.icon}/>,
+          name: 'CSS',
+          link: 'https://es.wikipedia.org/wiki/CSS',
         },
       ],
       showCustomImage: true,
