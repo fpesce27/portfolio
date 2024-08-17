@@ -87,9 +87,6 @@ galleryItem.forEach(function (element) {
 
 // Testimonials Slider
 
-const sliderContainer = document.querySelector(".testimonials-box");
-const slider = sliderContainer.children;
-const containerWidth = sliderContainer.offsetWidth;
 
 const margin = 30;
 let itemPerSlide = 0;
@@ -108,37 +105,6 @@ const responsive = [{
     },
   },
 ];
-
-function load() {
-  for (let i = 0; i < responsive.length; i++) {
-    if (window.innerWidth > responsive[i].breakPoint.width) {
-      itemPerSlide = responsive[i].breakPoint.item;
-    }
-  }
-  start();
-}
-
-function start() {
-  totalWidth = 0;
-  for (let i = 0; i < slider.length; i++) {
-    slider[i].style.width = containerWidth / itemPerSlide - margin + "px";
-    slider[i].style.margin = margin / 2 + "px";
-    totalWidth += containerWidth / itemPerSlide;
-  }
-  sliderContainer.style.width = totalWidth + "px";
-
-  sliderDot = Math.ceil(slider.length / itemPerSlide);
-
-  for (let i = 0; i < sliderDot; i++) {
-    const div = document.createElement("div");
-    div.id = i;
-    div.setAttribute("onclick", "controlSlide(this)");
-    if (i == 0) {
-      div.classList.add("active");
-    }
-    document.querySelector(".slider").appendChild(div);
-  }
-}
 
 let currentSlide = 0;
 let autoSlide = 0;
@@ -171,9 +137,37 @@ function autoPlay() {
 }
 let timer = setInterval(autoPlay, 5000);
 
-window.onload = load();
-
 
 //Footer Year 
 var year = document.getElementById("year");
 year.innerHTML = new Date().getFullYear();
+
+(function(){
+  emailjs.init({
+    publicKey: "FQZ0k8mSqFAU1QugN",
+  });
+})();
+
+document.getElementById('send-email-btn').addEventListener('click', function() {
+  // Obteniendo los valores de los campos
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Configura los parámetros para enviar
+  const params = {
+      from_name: name,
+      from_email: email,
+      message: message
+  };
+
+  // Envía el correo usando EmailJS
+  emailjs.send("service_kcgevji", "template_llh0uaq", params)
+  .then(function(response) {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Tu mensaje ha sido enviado con éxito!");
+  }, function(error) {
+      console.log("FAILED...", error);
+      alert("Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.");
+  });
+});

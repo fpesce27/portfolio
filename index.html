@@ -19,6 +19,8 @@
   <link href="./css/blog.css" rel="stylesheet" />
   <link href="./css/contact.css" rel="stylesheet" />
   <link href="./css/footer.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +37,7 @@
           <ul>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -154,32 +156,32 @@
       </div>
       <div class="row">
         <div class="contact-form">
-          <div class="row">
-            <div class="contact-text">
-              <h2>Drop Me message</h2>
-              <p>My inbox is always open I'll try my best to get back to you!</p>
+            <div class="row">
+                <div class="contact-text">
+                    <h2>Drop Me a Message</h2>
+                    <p>My inbox is always open. I'll try my best to get back to you!</p>
+                </div>
             </div>
-          </div>
-          <div class="row space-between">
-            <div class="col-6">
-              <input type="text" class="form-control" name="" placeholder="Name" />
+            <div class="row space-between">
+                <div class="col-6">
+                    <input type="text" id="name" class="form-control" placeholder="Name" />
+                </div>
+                <div class="col-6">
+                    <input type="email" id="email" class="form-control" placeholder="Email" />
+                </div>
             </div>
-            <div class="col-6">
-              <input type="text" class="form-control" name="" placeholder="Email" />
+            <div class="row">
+                <div class="col-12">
+                    <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <textarea class="form-control" placeholder="Your Message"></textarea>
+            <div class="row">
+                <div class="button btn">
+                    <a id="send-email-btn">Get In Touch</>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="button btn">
-              <a href="mailto:francopescee@gmail.com">Get In Touch</a>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     </div>
   </section>
   <footer>
