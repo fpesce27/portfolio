@@ -56,7 +56,7 @@ async function displayProjects() {
             <div class="inner">
                 <img src="${item.img}" alt="${item.category}" height="258px" width="464px"/>
                 <div class="overlay">
-                <span class="fa fa-external-link" onClick="${item.link ? `window.open('${item.link}', '_blank')` : ''}"></span>
+                <span class="fa fa-external-link" onClick="${item.link != null ? `window.open('${item.link}', '_blank')` : ''}"></span>
                 <h4>${item.title}</h4>
                 </div>
             </div>
